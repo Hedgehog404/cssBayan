@@ -34,6 +34,16 @@ header h1 {
     -webkit-background-clip: text;
 }
 
+p {
+    width: 100%;
+    margin: 0;
+}
+
+p img {
+    width: 50%;
+    height:auto;
+}
+
 .acor-container {
     margin: 20px 0;
     text-align: center;
@@ -99,6 +109,14 @@ header h1 {
 .acor-container input:checked+label:before {
     transition: transform .35s;
     transform: rotate(90deg);
+}
+
+.acor-container input:hover+label+.acor-body { 
+    transition: .7s;
+    height: auto;
+    margin-top: -5px;
+    color: var(--black);
+    padding: 20px 30px 10px;
 }
 
 .acor-container input:checked+label+.acor-body {
