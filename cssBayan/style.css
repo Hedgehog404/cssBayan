@@ -1,0 +1,109 @@
+
+:root {
+    --green: #499A18;
+    --dark-grey: #636060;
+    --grey-beige: #e3e1d5c0;
+    --white: #ffffff;
+    --black: #000000;
+    --white-green: #D6E7D2;
+    --marsh: #8BA07E;
+    --marsh-green: #C1E698;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    max-width: 100%;
+    scroll-behavior: smooth;
+    margin: auto;
+}
+header{
+  text-align: center; 
+  font-family: 'Righteous', sans-serif;
+}
+
+header h1 {
+    font-size: 70px;
+    font-weight: 600;
+    background-image: linear-gradient(to top,var(--green), var(--dark-grey));
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.acor-container {
+    margin: 20px 0;
+    text-align: center;
+    width: calc(80%);
+    margin: 0 auto;
+}
+
+.acor-container .acor-body {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    height: 0;
+    color:var(--black);
+    background-color: var(--white-green);
+    line-height: 18px;
+    padding: 0 30px;
+    box-sizing: border-box;
+    transition: color 0.5s, padding 0.5s;
+    overflow: hidden;
+    font-family: 'Righteous', sans-serif;
+    font-size: 16px;
+    box-shadow: 0 10px 16px var(--dark-grey);
+}
+
+.acor-container .acor-body p {
+    margin: 0 0 10px;
+}
+
+.acor-container label {
+    cursor: pointer;
+    background-color:var(--green);
+    display: block;
+    padding: 15px 20px;
+    width: 100%;
+    color:var(--white-green);
+    font-weight: 300;
+    box-sizing: border-box;
+    z-index: 100;
+    font-family: Verdana, sans-serif;
+    font-size: 18px;
+    margin: 0 0 5px;
+    transition: color .35s;
+}
+
+.acor-container label:hover {
+    color: var(--white);
+    border-color: var(--green);
+}
+
+.acor-container input {
+    display: none;
+}
+
+.acor-container label:before {
+    content: '\276F';
+    float: right;
+}
+
+.acor-container input:checked+label {
+    background-color: var(--grey-beige);
+    color:var(--green);
+}
+
+.acor-container input:checked+label:before {
+    transition: transform .35s;
+    transform: rotate(90deg);
+}
+
+.acor-container input:checked+label+.acor-body {
+    height: auto;
+    margin-top: -5px;
+    color: var(--black);
+    padding: 20px 30px 10px;
+}
