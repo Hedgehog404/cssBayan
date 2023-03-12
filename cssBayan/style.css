@@ -1,0 +1,227 @@
+
+:root {
+    --green: #499A18;
+    --dark-grey: #636060;
+    --grey-beige: #e3e1d5c0;
+    --white: #ffffff;
+    --black: #000000;
+    --white-green: #D6E7D2;
+    --marsh: #8BA07E;
+    --marsh-green: #C1E698;
+    --yellow-green: #d0f440;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    max-width: 100%;
+    scroll-behavior: smooth;
+    margin: auto;
+}
+
+header{
+  text-align: center; 
+  font-family: 'Righteous', sans-serif;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    background-image: linear-gradient(to top,var(--green), var(--dark-grey));
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+p {
+    width: 100%;
+    margin: 0;
+}
+
+p img {
+    width: 40%;
+    height:auto;
+}
+
+p:hover img {
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+    transition: opacity 1.3s, visibility 1s;
+    transition: transform .35s;
+}
+
+.acor-container {
+    margin: 1rem 0;
+    text-align: center;
+    width: calc(75%);
+    margin: 0 auto;
+}
+.acor-container:hover  { 
+    background-color: var(--marsh-green);
+}
+
+.acor-container label:after {
+    content: url(./assets/ico/favicon.ico);
+    float: right;
+    visibility: hidden;
+}
+.acor-container:hover label:after {
+    visibility:visible;
+}
+
+.acor-container .acor-body {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    height: 0;
+    color:var(--black);
+    background-color: var(--white-green);
+    line-height: 1rem;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    transition: color 0.5s, padding 0.5s;
+    overflow: hidden;
+    font-family: 'Righteous', sans-serif;
+    font-size: 1rem;
+    box-shadow: 0 1rem 2rem var(--dark-grey);
+}
+
+.acor-container .acor-body p {
+    margin: 0 0 1rem;
+}
+
+.acor-container label {
+    cursor: pointer;
+    background-color:var(--green);
+    display: block;
+    padding: 1rem 1.25rem;
+    width: 100%;
+    color:var(--white-green);
+    font-weight: 300;
+    box-sizing: border-box;
+    z-index: 100;
+    font-family: Verdana, sans-serif;
+    font-size: 1rem;
+    margin: 0 0 0.1%;
+    transition: color .35s;
+}
+
+.acor-container label:hover {
+    color: var(--white);
+    border-color: var(--green);
+}
+
+.acor-container input {
+    display: none;
+}
+
+.acor-container input:checked+label {
+    background-color: var(--grey-beige);
+    color:var(--green);
+    font-weight: bolder;
+}
+
+.acor-container input:checked+label:after {
+    transition: transform .35s;
+    transform: rotate(90deg);
+}
+
+.acor-container input:hover+label+.acor-body { 
+    transition: .7s;
+    height: auto;
+    margin-top: -0.3rem;
+    color: var(--black);
+    padding: 1.25rem 1.85rem 0.65rem;
+}
+
+.acor-container input:checked+label+.acor-body {
+    height: auto;
+    margin-top:-0.3rem;
+    color: var(--black);
+    padding: 1.25rem 1.85rem 0.65rem;
+}
+
+@media (max-width: 820px) {
+    header {
+        text-align: center;
+        font-family: 'Inika', sans-serif;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        background-image: linear-gradient(to top, var(--black), var(--green));
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
+
+    .acor-container {
+        margin: 1rem 0;
+        text-align: center;
+        width: calc(90%);
+        margin: 0 auto;
+    }
+
+    .acor-container label{
+        font-family: 'Inika';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 2rem;
+        color: var(--yellow-green);
+        margin: 0 0 1%;
+    }
+        p img {
+            width: 85%;
+            height: auto;
+    }
+
+    p:checked img {
+        -webkit-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+        transform: scale(0.7);
+        transition: opacity 1.3s, visibility 1s;
+        transition: transform .35s;
+    }
+}
+
+@media (max-width: 380px) {
+
+        header {
+            text-align: center;
+            font-family: 'Tahoma';
+        }
+    
+        header h1 {
+            font-size: 1rem;
+            font-weight: 600;
+            color:var(--grey);
+            background-clip: text;
+        }
+        
+        .acor-container {
+            margin: 1rem 0;
+            text-align: center;
+            width: 100%;
+            margin: 0 auto;
+        }
+    
+        .acor-container label {
+            font-family: 'Tahoma';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 0.8rem;
+            line-height: 1rem;
+            color: var(--grey);
+        }
+        
+        p img {
+            width: 100%;
+            height: auto;
+        }
+
+}
