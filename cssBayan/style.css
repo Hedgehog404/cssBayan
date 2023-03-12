@@ -65,7 +65,7 @@ p:hover img {
 }
 
 .acor-container label:after {
-    content: url(./assets/ico/favicon.ico);
+    content: url(./assets/ico/favicon2.ico);
     float: right;
     visibility: hidden;
 }
@@ -173,11 +173,20 @@ p:hover img {
         font-size: 1rem;
         line-height: 2rem;
         color: var(--yellow-green);
+        margin: 0 0 1%;
     }
         p img {
-            width: 850%;
+            width: 85%;
             height: auto;
-        }
+    }
+
+    p:checked img {
+        -webkit-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+        transform: scale(0.7);
+        transition: opacity 1.3s, visibility 1s;
+        transition: transform .35s;
+    }
 }
 
 @media (max-width: 380px) {
