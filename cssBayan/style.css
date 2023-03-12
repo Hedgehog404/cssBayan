@@ -8,6 +8,7 @@
     --white-green: #D6E7D2;
     --marsh: #8BA07E;
     --marsh-green: #C1E698;
+    --yellow-green: #d0f440;
 }
 
 * {
@@ -26,7 +27,7 @@ header{
 }
 
 header h1 {
-    font-size: 70px;
+    font-size: 2.5rem;
     font-weight: 600;
     background-image: linear-gradient(to top,var(--green), var(--dark-grey));
     color: transparent;
@@ -40,15 +41,27 @@ p {
 }
 
 p img {
-    width: 50%;
+    width: 40%;
     height:auto;
 }
 
 .acor-container {
-    margin: 20px 0;
+    margin: 1rem 0;
     text-align: center;
-    width: calc(80%);
+    width: calc(75%);
     margin: 0 auto;
+}
+.acor-container:hover  { 
+    background-color: var(--marsh-green);
+}
+
+.acor-container label:after {
+    content: url(./assets/ico/favicon.ico);
+    float: right;
+    visibility: hidden;
+}
+.acor-container:hover label:after {
+    visibility:visible;
 }
 
 .acor-container .acor-body {
@@ -57,33 +70,33 @@ p img {
     height: 0;
     color:var(--black);
     background-color: var(--white-green);
-    line-height: 18px;
-    padding: 0 30px;
+    line-height: 1rem;
+    padding: 0 2rem;
     box-sizing: border-box;
     transition: color 0.5s, padding 0.5s;
     overflow: hidden;
     font-family: 'Righteous', sans-serif;
-    font-size: 16px;
-    box-shadow: 0 10px 16px var(--dark-grey);
+    font-size: 1rem;
+    box-shadow: 0 1rem 2rem var(--dark-grey);
 }
 
 .acor-container .acor-body p {
-    margin: 0 0 10px;
+    margin: 0 0 1rem;
 }
 
 .acor-container label {
     cursor: pointer;
     background-color:var(--green);
     display: block;
-    padding: 15px 20px;
+    padding: 1rem 1.25rem;
     width: 100%;
     color:var(--white-green);
     font-weight: 300;
     box-sizing: border-box;
     z-index: 100;
     font-family: Verdana, sans-serif;
-    font-size: 18px;
-    margin: 0 0 5px;
+    font-size: 1rem;
+    margin: 0 0 0.1%;
     transition: color .35s;
 }
 
@@ -96,17 +109,13 @@ p img {
     display: none;
 }
 
-.acor-container label:before {
-    content: url(./assets/ico/favicon.ico);
-    float: right;
-}
-
 .acor-container input:checked+label {
     background-color: var(--grey-beige);
     color:var(--green);
+    font-weight: bolder;
 }
 
-.acor-container input:checked+label:before {
+.acor-container input:checked+label:after {
     transition: transform .35s;
     transform: rotate(90deg);
 }
@@ -114,14 +123,14 @@ p img {
 .acor-container input:hover+label+.acor-body { 
     transition: .7s;
     height: auto;
-    margin-top: -5px;
+    margin-top: -0.3rem;
     color: var(--black);
-    padding: 20px 30px 10px;
+    padding: 1.25rem 1.85rem 0.65rem;
 }
 
 .acor-container input:checked+label+.acor-body {
     height: auto;
-    margin-top: -5px;
+    margin-top:-0.3rem;
     color: var(--black);
-    padding: 20px 30px 10px;
+    padding: 1.25rem 1.85rem 0.65rem;
 }
