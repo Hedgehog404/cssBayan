@@ -21,6 +21,7 @@ html {
     scroll-behavior: smooth;
     margin: auto;
 }
+
 header{
   text-align: center; 
   font-family: 'Righteous', sans-serif;
@@ -43,6 +44,14 @@ p {
 p img {
     width: 40%;
     height:auto;
+}
+
+p:hover img {
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
+    transition: opacity 1.3s, visibility 1s;
+    transition: transform .35s;
 }
 
 .acor-container {
@@ -133,4 +142,77 @@ p img {
     margin-top:-0.3rem;
     color: var(--black);
     padding: 1.25rem 1.85rem 0.65rem;
+}
+
+@media (max-width: 820px) {
+    header {
+        text-align: center;
+        font-family: 'Inika', sans-serif;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        background-image: linear-gradient(to top, var(--black), var(--green));
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
+
+    .acor-container {
+        margin: 1rem 0;
+        text-align: center;
+        width: calc(90%);
+        margin: 0 auto;
+    }
+
+    .acor-container label{
+        font-family: 'Inika';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 2rem;
+        color: var(--yellow-green);
+    }
+        p img {
+            width: 850%;
+            height: auto;
+        }
+}
+
+@media (max-width: 380px) {
+
+        header {
+            text-align: center;
+            font-family: 'Tahoma';
+        }
+    
+        header h1 {
+            font-size: 1rem;
+            font-weight: 600;
+            color:var(--grey);
+            background-clip: text;
+        }
+        
+        .acor-container {
+            margin: 1rem 0;
+            text-align: center;
+            width: 100%;
+            margin: 0 auto;
+        }
+    
+        .acor-container label {
+            font-family: 'Tahoma';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1rem;
+            line-height: 1rem;
+            color: var(--grey);
+        }
+        
+        p img {
+            width: 100%;
+            height: auto;
+        }
+
 }
