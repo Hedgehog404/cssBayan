@@ -87,7 +87,7 @@ header h1 {
 }
 
 .acor-container label:before {
-    content: '\276F';
+    content: url(./assets/ico/favicon.ico);
     float: right;
 }
 
